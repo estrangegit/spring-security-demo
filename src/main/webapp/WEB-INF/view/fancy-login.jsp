@@ -22,9 +22,7 @@
 </head>
 
 <body>
-
 	<div>
-
 		<div id="loginbox" style="margin-top: 50px;"
 			class="mainbox col-md-3 col-md-offset-2 col-sm-6 col-sm-offset-2">
 
@@ -45,19 +43,18 @@
 						<div class="form-group">
 							<div class="col-xs-15">
 								<div>
-
 									<!-- Check for login error -->
 									<c:if test="${ param.error != null }">
 										<div class="alert alert-danger col-xs-offset-1 col-xs-10">
 											Invalid username and password.</div>
-
 									</c:if>
-									<!--		            
-									<div class="alert alert-success col-xs-offset-1 col-xs-10">
-										You have been logged out.
-									</div>
-								    -->
 
+									<!-- check for logout -->
+									<c:if test="${ param.logout != null }">									
+										<div class="alert alert-success col-xs-offset-1 col-xs-10">
+											You have been logged out.
+										</div>
+									</c:if>									
 								</div>
 							</div>
 						</div>
@@ -88,10 +85,7 @@
 					</form:form>
 				</div>
 			</div>
-
 		</div>
-
 	</div>
-
 </body>
 </html>
